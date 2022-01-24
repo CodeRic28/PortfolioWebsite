@@ -98,19 +98,15 @@ h3 {font-size: var(--fs-h3);}
 /* Nav Section */
 
 .nav__list {
-display: flex;
-margin-left: 15rem;
-margin-right: 15rem;
-padding: var(--fs-s);
-list-style: none;
-gap: var(--fs-s);
-justify-content: space-around ;
-    
-    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: min-content;
 }
 
 .list__item {
     padding: 0.25em 1.25em;
+    list-style: none;
     transition: outline 200ms ease-in-out, transform 200ms ease-in-out;
 }
 
@@ -119,12 +115,26 @@ justify-content: space-around ;
     
     outline: 0.5px solid black;
     transform: scale(1.1);
-    /* outline-offset: 1px; */
 }
 
 .nav__url{
     text-decoration: none;
     color: #2D2D2A;
+    list-style: none;
+}
+
+@media (min-width: 600px){
+    .nav__list {
+        display: flex;
+        flex-direction: row;
+        margin-left: 15rem;
+        margin-right: 15rem;
+        padding: var(--fs-s);
+        list-style: none;
+        gap: var(--fs-s);
+        justify-content: space-around ; 
+    }
+    
 }
 
 /* Intro Section */
@@ -172,7 +182,7 @@ justify-content: space-around ;
 
     .intro__img {
         grid-area: img; /* row will start from img so subtitle will start directly over img */
-        min-width: 16.25rem;/*260px;*/
+        min-width: 260px;/*260px;*/
         position: relative;
         z-index: 1;
     }
@@ -195,8 +205,8 @@ justify-content: space-around ;
 /* About */
 
 .about {
-    border: 2px solid black;
     background-color: var(--tertiary-clr-two);
+    /* padding: 0; */
     text-align: center;
     font-family: var(--ff-primary);
     background: var(--secondary-dark);
@@ -221,12 +231,12 @@ justify-content: space-around ;
     margin: 0 auto;
 }
 
-@media (min-width: 900px) {
-    
+@media (min-width: 600px) {
     
     .card__container {
         display: flex;
-        gap: 3rem;
+        flex-direction: column;
+        gap: 2rem;
         
     }
     
@@ -238,27 +248,13 @@ justify-content: space-around ;
 
 /* Goodreads */
 
-
-.goodreads{
-    /* background-image: url(../img/gr.png); */
-    background-size:cover;
-    text-align: center;
-    text-transform: uppercase;
-}
-
-.cover{
-    height: 300px;
-    background: url(../img/cover.jpg);
-    background-size: cover;
-
-}
-
 .gr__subtitle {
     text-align: left;
-        color: white;
-        background: var(--accent-clr);
-        padding: .5rem;
+    color: white;
+    background: var(--accent-clr);
+    padding: .5rem;
 }
+
 
 @media (min-width:1000px){
     .goodreads {
@@ -268,15 +264,12 @@ justify-content: space-around ;
         background-blend-mode:hard-light;
         text-align: center;
         text-transform: uppercase;
-        width: min-content; /* reduces extra padding */
+        width: min-content; /*reduces extra padding */  
         margin: 0 auto; /* width: min-content necessary to center */
         display: grid;
-        /* grid-template-areas: 
-            "img title"
-            "img subtitle"; */
         grid-template-areas: 
             "title img"
-            "subtitle img"; /*Image on the right */
+            "subtitle img"; 
         grid-template-columns: min-content max-content;
         grid-column-gap: 1rem;
          
@@ -284,9 +277,7 @@ justify-content: space-around ;
 
     .cover {
         position: relative;
-        min-width: 500px;
         grid-area: img;
-        position: relative;
         z-index: 1;
         box-shadow: var(--bs);
     }
