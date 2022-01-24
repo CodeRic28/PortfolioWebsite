@@ -378,11 +378,21 @@ justify-content: space-around ;
     font-family: var(--ff-primary);
 }
 
+.footer__title::after {
+    content: '';
+    display: block;
+    width: 3em;
+    height: 1px;
+    background: var(--primary-clr);
+    margin: 0 auto;
+}
+
 .footer__social__icons {
     display: flex;
     /* border: 2px solid white; */
     justify-content: center;
     gap: 2rem;
+    padding-top: 1rem;
 }
 
 .footer__social__icon {
