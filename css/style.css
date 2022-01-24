@@ -127,7 +127,6 @@ justify-content: space-around ;
     color: #2D2D2A;
 }
 
-
 /* Intro Section */
 
 .intro__img {
@@ -173,7 +172,7 @@ justify-content: space-around ;
 
     .intro__img {
         grid-area: img; /* row will start from img so subtitle will start directly over img */
-        min-width: 260px;
+        min-width: 16.25rem;/*260px;*/
         position: relative;
         z-index: 1;
     }
@@ -222,7 +221,7 @@ justify-content: space-around ;
     margin: 0 auto;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 900px) {
     
     
     .card__container {
