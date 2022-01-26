@@ -109,7 +109,7 @@ h3 {font-size: var(--fs-h3);}
 }
 
 .list__item {
-    padding: 0.25em 0.25em;
+    padding: 0.25em 0.75em;
     list-style: none;
     transition: outline 200ms ease-in-out, transform 200ms ease-in-out;
 
